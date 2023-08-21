@@ -21,7 +21,7 @@ function Carrinho({ carrinho }) {
         <div className="listaCarrinho">
           {
               carrinho.map((e) => (
-                <div className="itemCarrinho">
+                <div className="itemCarrinho" key={e.idw} data-testid="itemCarrinho">
                   <img alt={e.name} src={e.images} />
                   <div>
                     <p>{e.name}</p>
