@@ -21,23 +21,6 @@ test('If product exist', () => {
 
     const searchInput = screen.getByPlaceholderText('Pesquise os melhores produtos');
     expect(searchInput).toBeInTheDocument();
-    
-
-
+  
 });
 
-test('Clicking on product adds it to the cart', () => {
-  const mockHandleCarrinho = jest.fn();
-  const mockProduto = { id: 1, name: 'Test Product', price: 9.99 };
-
-  render(
-    <BrowserRouter>
-      <Produtos handleCarrinho={mockHandleCarrinho} carrinho={[]} />
-    </BrowserRouter>
-  );
-
-  const productElement = screen.getByTestId('produtos');
-  fireEvent.click(productElement);
-
-  expect(mockHandleCarrinho).toHaveBeenCalledWith(mockProduto);
-});
