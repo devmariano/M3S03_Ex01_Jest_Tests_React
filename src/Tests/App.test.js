@@ -16,7 +16,7 @@ test('Add item to cart when handleCarrinho is called', () => {
   );
 
   // Verify if the item was added to the cart
-  const cartLink = screen.getByTestId('carrinho_length'); // Use the correct data-testid attribute here
+  const cartLink = screen.getByTestId('carrinho_length'); 
   fireEvent.click(cartLink);
 
 });
